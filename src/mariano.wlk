@@ -20,6 +20,10 @@ object mariano {
 	}
 	
 	method hayGolosinaSinTACC() = golosinas.any({golosina => golosina.libreDeGluten()})
+	
+	method preciosCuidados() = golosinas.all({golosina => golosina.precio() <= 10})
+	
+	method golosinaDeSabor(unSabor) = golosinas.find({golosina => golosina.sabor() == unSabor})
 }
 
 
